@@ -1,0 +1,10 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Símbolo abstracto: una “S” estilizada con líneas conectadas -->
+  <path d="M20 15 Q30 5, 40 15 T60 15" stroke="#2E86DE" stroke-width="3" fill="none"></path>
+  <circle cx="40" cy="15" r="4" fill="#2E86DE"></circle>
+  
+  <!-- Texto Synet -->
+  <text x="80" y="38" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#2E86DE" font-weight="600">
+    Synet
+  </text>
+</svg>
