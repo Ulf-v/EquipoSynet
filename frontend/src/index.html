@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
+    <link rel="shortcut icon" href="./../public/synet-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 <body>
     <div class="container">
         <header class="cabecera">
@@ -21,13 +26,27 @@
         </header>
         <main>
             <section class="chatbot">
-                <aside class="chatbot__menu-lateral">
+                <aside class="menu-lateral">
+                    <ul class="menu-lateral__lista">
+                        <li><a class="menu-lateral__enlace" href="#">Nuevo chat</a></li>
+                        <li><a class="menu-lateral__enlace" href="#">Historial</a></li>
+                        <li><a class="menu-lateral__enlace" href="#">Usuarios</a></li>
+                    </ul>
                 </aside>
-                <article class="chatbot__chat">
-                    <input class="chatbot__cuadro-txt" type="text">
-                </article>
+                <section class="chatbot__chat">
+                    <section class="chatbot__bloque" id="chat">
+                    </section>
+                    <div class="chatbot__form">
+                        <input class="chatbot__cuadro-txt" type="text" id="inputTxt" placeholder="Escribe tu pregunta">
+                        <button id="enviar" class="chatbot__enviar">
+                            <i class="fa-solid fa-paper-plane chatbot__icon"></i>
+                        </button>
+                    </div>
+                </section>
             </section>
         </main>
     </div>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>

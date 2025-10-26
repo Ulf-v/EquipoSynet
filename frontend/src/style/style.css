@@ -1,16 +1,28 @@
-*{
+:root{
+    --color-txt: #fff;
+    --color-txt-secondary: #c2dbf5;
+    --link-color: #2E86DE;
+    --aside-color: #8ab9e9;
+    --background-color: rgb(222, 255, 255);
+    --header-color: rgb(194, 214, 233);
+}
+
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0px;
     padding: 0px;
 }
-.container{
-    width: 100%;
+
+.container {
+    max-width: 1920px;
 }
+
 /* sección general de pagina de chatbot */
-.cabecera{
-    background-color: rgb(194, 214, 233);
+.cabecera {
+    background-color: var(--header-color);
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -18,12 +30,14 @@ body{
     padding-bottom: 10px;
 
 }
-.menu-superior__enlace{
-    color: #2E86DE;
+
+.menu-superior__enlace {
+    color: var(--link-color);
     text-decoration: none;
     font-family: sans-serif;
 }
-.menu-superior__lista{
+
+.menu-superior__lista {
     margin-left: 0px;
     list-style: none;
     padding-left: 0px;
@@ -32,19 +46,155 @@ body{
     gap: 30px;
     align-items: center;
 }
-.menu-superior__enlace:hover{
+
+.menu-superior__enlace:hover {
     text-decoration: underline;
 }
+
 /* seccion de conversaciones */
-.chatbot__menu-lateral{
-    background-color: #8ab9e9;
-    height: 100vh;
+.menu-lateral {
+    padding-top: 20px;
+    background-color: var(--aside-color);
 }
-.chatbot__chat{
-    background-color: rgb(222, 255, 255);
-    height: 100vh;
+
+.menu-lateral__lista{
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
-.chatbot{
+.menu-lateral__lista li{
+    border-radius: 15px;
+    background-color: var(--header-color);
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.menu-lateral__lista li:hover{
+    background-color: var(--link-color);
+    color: var(--color-txt);
+}
+.menu-lateral__enlace{
+    color: var(--link-color);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 94px;
+    padding-right: 94px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.menu-lateral__enlace:hover{
+    color: var(--color-txt);
+}
+
+.chatbot__chat {
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    padding-top: 20px;
+    grid-template-rows: 83vh 1fr;
+}
+
+
+.chatbot {
     display: grid;
     grid-template-columns: 300px 1fr;
+    height: 91vh;
+    background-color: var(--background-color);
+}
+
+.chatbot__form {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.chatbot__cuadro-txt {
+    margin: 0px;
+    background-color: var(--aside-color);
+    border: none;
+    border-radius: 40px;
+    min-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+    color: var(--color-txt);
+    width: 90%;
+}
+
+.chatbot__cuadro-txt:focus {
+    border: none;
+    outline: none;
+    background-color: var(--link-color);
+}
+
+/* chat */
+
+.chatbot__bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+.chatbot__bloque::-webkit-scrollbar {
+  display: none;
+}
+
+.chatbot__mensaje-user {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.chatbot__bocadillo {
+    background-color: var(--link-color);
+    border-radius: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    color: var(--color-txt);
+    margin-right: 20px;
+    max-width: 850px;
+}
+
+.chatbot__txt {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 900px;
+    overflow-wrap: break-word;
+
+}
+
+.chatbot__hora {
+    margin: 0px;
+    font-size: 0.8rem;
+    color: var(--color-txt-secondary);
+    text-align: right;
+}
+
+.chatbot__enviar {
+    background-color: var(--header-color);
+    border: none;
+    color: var(--color-txt);
+    border-radius: 100px;
+    padding: 15px;
+}
+.chatbot__cuadro-txt::placeholder{
+    color: var(--color-txt);
+}
+
+
+.chatbot__enviar:hover{
+    background-color: var(--link-color);
+}
+.chatbot__icon{
+    font-size: 1.2rem;
 }
