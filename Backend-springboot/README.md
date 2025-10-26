@@ -8,7 +8,7 @@ Este es el backend del proyecto Equipo Synet desarrollado con Spring Boot. Propo
 - **Maven 3.6+** (incluido en el proyecto mediante Maven Wrapper)
 - **Git** para clonar el repositorio
 
-## 🚀 Descargar el Proyecto
+## 🚀 Descargar Backend-springboot
 
 ```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/Ulf-v/EquipoSynet.git
