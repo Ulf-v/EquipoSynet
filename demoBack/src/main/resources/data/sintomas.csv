@@ -1,0 +1,8 @@
+nombre_sintoma,descripcion,codigo_cie10,especialidad
+fiebre,Temperatura corporal elevada,R50,Medicina general
+tos,Tos persistente o irritativa,R05,Neumología
+dolor de cabeza,Cefalea,R51,Neurología
+dolor abdominal,Dolor en la zona abdominal,R10,Gastroenterología
+mareo,Sensación de vértigo,R42,Medicina general
+dificultad para respirar,Dificultad respiratoria,R06.0,Neumología
+erupción cutánea,Lesiones o irritación en la piel,L98,Dermatología
