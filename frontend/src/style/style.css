@@ -70,8 +70,6 @@ body {
     border-radius: 15px;
     background-color: var(--header-color);
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
     text-align: center;
 }
 
@@ -81,15 +79,14 @@ body {
 }
 
 .menu-lateral__enlace {
+    display: block;
     color: var(--link-color);
     text-decoration: none;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 94px;
-    padding-right: 94px;
     border-radius: 10px;
     font-family: sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .menu-lateral__enlace:hover {
@@ -151,6 +148,8 @@ body {
     flex-direction: column;
     gap: 15px;
     overflow-y: scroll;
+    padding-right: 10px;
+    height: 800px;
 }
 
 .chatbot__bloque::-webkit-scrollbar {
