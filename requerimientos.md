@@ -1,4 +1,4 @@
-#Especificación de Requerimientos de Software (SRS)
+# Especificación de Requerimientos de Software (SRS)
 
 **Nombre del Proyecto:** primarIA  
 **Versión:** 1.0  
