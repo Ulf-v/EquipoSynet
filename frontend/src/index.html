@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="main">
         <header class="cabecera">
             <img src="./../public/synet-logo.svg" alt="Logotipo">
             <nav class="menu-superior">
@@ -24,29 +24,89 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="chatbot">
-                <aside class="menu-lateral">
-                    <ul class="menu-lateral__lista">
-                        <li><a class="menu-lateral__enlace" href="#">Nuevo chat</a></li>
-                        <li><a class="menu-lateral__enlace" href="#">Historial</a></li>
-                        <li><a class="menu-lateral__enlace" href="#">Usuarios</a></li>
-                    </ul>
-                </aside>
-                <section class="chatbot__chat">
-                    <section class="chatbot__bloque" id="chat">
-                        
-                    </section>
-                    <div class="chatbot__form">
-                        <input class="chatbot__cuadro-txt" type="text" id="inputTxt" placeholder="Escribe tu pregunta">
-                        <button id="enviar" class="chatbot__enviar">
-                            <i class="fa-solid fa-paper-plane chatbot__icon"></i>
-                        </button>
-                    </div>
-                </section>
+
+        <aside class="menu-lateral">
+            <ul class="menu-lateral__lista">
+                <li><a class="menu-lateral__enlace" href="#">Nuevo chat</a></li>
+                <li><a class="menu-lateral__enlace" href="#">Historial</a></li>
+                <li><a class="menu-lateral__enlace" href="#">Usuarios</a></li>
+            </ul>
+        </aside>
+        <section class="chatbot__chat">
+            <section class="chatbot__bloque" id="chat">
+
+                <!-- <article class="chatbot__txt-ia">
+                            <p class="chatbot__parrafo-ia">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Atque at dolorem rerum id laboriosam officiis rem beatae a tempora, vitae blanditiis
+                                iste obcaecati numquam totam nostrum quia. Consequuntur, ex dignissimos!</p>
+                            <button class="chatbot__btn-comentarios" id="chatbot__btn-comentarios">Valorar respuesta</button>
+
+                            <form action="#" method="post" class="formulario" id="formulario">
+                                <h3 class="formulario__title">Formulario de valoración de respuesta</h3>
+                                <textarea class="formulario__textarea" name="valoracion" id=""
+                                    placeholder="Escriba aquí su valoración"></textarea>
+                                <article class="formulario__selector">
+                                    <label for="valoracion">Valoración de redacción</label>
+                                    <select name="" id="" class="formulario__select">
+                                        <option value="" disabled selected>Seleccione una nota</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </article>
+                                <article class="formulario__selector">
+                                    <label for="valoracion">Valoración de rigurosidad médica</label>
+                                    <select name="" id="" class="formulario__select">
+                                        <option value="" disabled selected>Seleccione una nota</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </article>
+                                <article class="formulario__selector">
+                                    <label for="valoracion">Valoración de razonamiento según el contexto</label>
+                                    <select name="" id="" class="formulario__select">
+                                        <option value="" disabled selected>Seleccione una nota</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </article>
+
+                                <input class="formulario__submit" type="submit" value="Enviar">
+                            </form>
+                        </article> -->
+
             </section>
-        </main>
-    </div>
+            <div class="chatbot__form">
+                <input class="chatbot__cuadro-txt" type="text" id="inputTxt" placeholder="Escribe tu pregunta">
+                <button id="enviar" class="chatbot__enviar">
+                    <i class="fa-solid fa-paper-plane chatbot__icon"></i>
+                </button>
+            </div>
+        </section>
+    </main>
     <script src="./js/index.js"></script>
 </body>
 
