@@ -148,7 +148,6 @@ Consta de tres módulos principales:
 ### 3.5 Requerimientos de calidad
 - **Usabilidad:** interfaz intuitiva, validada con pruebas de usabilidad médica.  
 - **Mantenibilidad:** código modular, documentado y versionado en GitHub.  
-- **Portabilidad:** compatible con Windows, Linux y macOS.  
 - **Escalabilidad:** arquitectura cloud-native.  
 
 ---
