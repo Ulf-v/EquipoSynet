@@ -3,7 +3,7 @@
 **Nombre del Proyecto:** primarIA  
 **Versión:** 1.0  
 **Fecha:** 06-11-2025  
-**Autores:** Equipo Synet  
+**Autores:** Hexure y Rusters
 **Organización:** IES Ribera del Tajo  
 
 ---
