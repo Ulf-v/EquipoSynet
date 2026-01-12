@@ -298,3 +298,20 @@ body {
     color: white;
     outline: none;
 }
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+}
+
+.cuadro {
+    border-radius: 10px;
+    border-left: #8ab9e9 5px solid;
+    padding: 20px;
+    background-color: var(--color-txt-secondary);
+    color: #2E86DE;
+    margin-bottom: 20px;
+}
