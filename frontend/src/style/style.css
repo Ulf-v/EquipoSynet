@@ -385,8 +385,6 @@ body {
     BREACKPOINT - 576px 
 =========================== */
 @media (min-width: 576px) {
-
-
     .main {
         grid-template-rows: 65px 1fr;
     }
@@ -420,6 +418,56 @@ body {
 
     .menu-lateral__enlace {
         font-size: 0.92rem;
+    }
+}
+
+/* ===========================
+   BREACKPOINT - 768px
+=========================== */
+@media (min-width: 768px) {
+    .main {
+        grid-template-rows: 70px 1fr;
+    }
+
+    .chatbot__chat {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 700px;
+    }
+
+    .chatbot__bocadillo {
+        max-width: 80%;
+        font-size: 0.95rem;
+    }
+
+    .chatbot__txt-ia {
+        max-width: 80%;
+    }
+
+    .chatbot__parrafo-ia {
+        font-size: 0.95rem;
+    }
+
+    .chatbot__bloque {
+        padding-right: 8px;
+    }
+
+    .chatbot__cuadro-txt {
+        min-height: 50px;
+        width: 90%;
+        font-size: 0.95rem;
+    }
+
+    .chatbot__enviar {
+        padding: 0.85rem;
+    }
+
+    .chatbot__hora {
+        font-size: 0.78rem;
+    }
+
+    .chatbot__btn-comentarios {
+        font-size: 0.85rem;
     }
 }
 
