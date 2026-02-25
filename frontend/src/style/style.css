@@ -11,32 +11,74 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
 body {
     margin: 0px;
     padding: 0px;
+    font-size: 14px;
 }
 
+/* CONTENEDOR */
 .main {
     height: 100vh;
     display: grid;
     background-color: var(--background-color);
-    grid-template-columns: 270px 1fr;
-    grid-template-rows: 70px 1fr;
-    grid-template-areas: 
-    "cabecera cabecera"
-    "lateral chat";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "cabecera"
+        "chat";
 }
 
-/* sección general de pagina de chatbot */
+/* CABECERA */
 .cabecera {
     grid-area: cabecera;
     width: 100%;
     background-color: var(--header-color);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
+}
+
+/* MENÚ HAMBURGUESA */
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 200;
+}
+
+.hamburguesa span {
+    display: block;
+    width: 1.5rem;
+    height: 3px;
+    background-color: var(--link-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* MENÚ SUPERIOR */
+.menu-superior {
+    display: none;
+}
+
+.menu-superior__lista {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 1.8rem;
     align-items: center;
 }
 
@@ -44,39 +86,39 @@ body {
     color: var(--link-color);
     text-decoration: none;
     font-family: sans-serif;
-}
-
-.menu-superior__lista {
-    margin-left: 0px;
-    list-style: none;
-    padding-left: 0px;
-    display: flex;
-    justify-content: left;
-    gap: 30px;
-    align-items: center;
+    font-size: 0.9rem;
 }
 
 .menu-superior__enlace:hover {
     text-decoration: underline;
 }
 
-/* seccion de conversaciones */
+/* MENÚ LATERAL  */
 .menu-lateral {
+    grid-area: lateral;
     background-color: var(--aside-color);
     padding-top: 20px;
-    grid-area: lateral;
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 270px;
+    height: calc(100vh - 60px);
+    z-index: 100;
+    transition: left 0.3s ease;
+}
+
+.menu-lateral.abierto {
+    left: 0;
 }
 
 .menu-lateral__lista {
     margin: 0 auto;
     list-style: none;
-    padding-left: 0px;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.2rem;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .menu-lateral__lista li {
@@ -98,25 +140,41 @@ body {
     text-align: center;
     border-radius: 10px;
     font-family: sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    font-size: 0.9rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
 }
 
 .menu-lateral__enlace:hover {
     color: var(--color-txt);
 }
 
-/* chat */
+/* OVERLAY */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: rgba(0,0,0,0.3);
+    z-index: 99;
+}
+
+.overlay.activo {
+    display: block;
+}
+
+/* CHAT */
 .chatbot__chat {
     grid-area: chat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 20px;
-    max-width: 940px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 0 auto;
     overflow-y: scroll;
 }
@@ -126,8 +184,8 @@ body {
     align-items: center;
     justify-content: left;
     gap: 10px;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    margin-bottom: 15px;
+    padding-top: 10px;
 }
 
 .chatbot__cuadro-txt {
@@ -135,14 +193,13 @@ body {
     background-color: var(--header-color);
     border: none;
     border-radius: 40px;
-    min-height: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 1rem;
+    min-height: 45px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
     color: var(--color-txt);
-    width: 90%;
+    width: 85%;
 }
-
 
 .chatbot__cuadro-txt:focus {
     border: none;
@@ -150,15 +207,12 @@ body {
     background-color: var(--aside-color);
 }
 
-/* chat */
-
 .chatbot__bloque {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9rem;
     overflow-y: scroll;
-    padding-right: 10px;
-    max-height: 800px;
+    padding-right: 5px;
     background-color: var(--background-color);
 }
 
@@ -175,23 +229,22 @@ body {
 .chatbot__bocadillo {
     background-color: var(--link-color);
     border-radius: 20px;
-    padding: 10px;
+    padding: 0.6rem 0.8rem;
     font-family: sans-serif;
+    font-size: 0.9rem;
     color: var(--color-txt);
-    max-width: 850px;
+    max-width: 100%;
 }
 
 .chatbot__txt {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    max-width: 900px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
     overflow-wrap: break-word;
-
 }
 
 .chatbot__hora {
     margin: 0px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--color-txt-secondary);
     text-align: right;
 }
@@ -201,7 +254,7 @@ body {
     border: none;
     color: var(--color-txt);
     border-radius: 100px;
-    padding: 15px;
+    padding: 0.7rem;
 }
 
 .chatbot__cuadro-txt::placeholder {
@@ -213,54 +266,59 @@ body {
 }
 
 .chatbot__icon {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .chatbot__txt-ia {
     background-color: var(--header-color);
     border-radius: 10px;
-    padding: 10px;
-    max-width: 750px;
+    padding: 0.6rem 0.8rem;
+    max-width: 100%;
 }
 
 .chatbot__parrafo-ia {
     font-family: sans-serif;
+    font-size: 0.9rem;
     margin: 0px;
 }
 
-/* formulario de feedback */
-.formulario{
+/* FORMULARIO FEEDBACK */
+.formulario {
     font-family: sans-serif;
+    font-size: 0.9rem;
     display: none;
 }
 
-.formulario__title{
+.formulario__title {
     font-variant: small-caps;
     color: var(--link-color);
-    
 }
-.formulario__textarea{
+
+.formulario__textarea {
     width: 100%;
     height: 150px;
     resize: none;
     font-family: sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     outline: none;
     border: none;
     border-radius: 10px;
     padding: 5px;
 }
-.formulario__textarea::placeholder{
+
+.formulario__textarea::placeholder {
     color: var(--color-txt-secondary);
 }
-.formulario__selector{
+
+.formulario__selector {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 255, 0.199);
     margin-top: 10px;
 }
-.formulario__submit{
+
+.formulario__submit {
     display: block;
     width: 100%;
     height: 40px;
@@ -270,48 +328,54 @@ body {
     color: white;
     padding: 5px;
     border-radius: 10px;
-    margin-top: 20px
-
+    margin-top: 20px;
 }
-.formulario__submit:hover{
+
+.formulario__submit:hover {
     background-color: var(--link-color);
 }
-.chatbot__btn-comentarios{
-    margin-top: 10px;
+
+.chatbot__btn-comentarios {
+    margin-top: 0.6rem;
     outline: none;
     border: none;
     background-color: var(--aside-color);
     color: white;
-    padding: 5px;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 10px;
 }
-.chatbot__btn-comentarios:hover{
+
+.chatbot__btn-comentarios:hover {
     background-color: var(--link-color);
 }
-.mostrar{
+
+.mostrar {
     display: block;
 }
-.formulario__select{
+
+.formulario__select {
     background-color: var(--aside-color);
     border: none;
     padding: 5px;
     color: white;
     outline: none;
+    font-size: 0.85rem;
 }
-
 
 .form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 25%;
+    width: 100%;
 }
 
 .cuadro {
     border-radius: 10px;
     border-left: #8ab9e9 5px solid;
-    padding: 20px;
+    padding: 1.2rem;
     background-color: var(--color-txt-secondary);
     color: #2E86DE;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
 }
