@@ -552,3 +552,44 @@ body {
     }
 }
 
+/* ===========================
+   BREACKPOINT - 1200px
+=========================== */
+@media (min-width: 1200px) {
+    .chatbot__chat {
+        max-width: 900px;
+    }
+
+    .chatbot__bloque {
+        max-height: 750px;
+    }
+
+    .menu-superior__enlace {
+        font-size: 1rem;
+        gap: 2rem;
+    }
+
+    .menu-lateral__enlace {
+        font-size: 1rem;
+    }
+
+    .chatbot__bocadillo {
+        font-size: 1.05rem;
+    }
+
+    .chatbot__parrafo-ia {
+        font-size: 1.05rem;
+    }
+
+    .chatbot__cuadro-txt {
+        font-size: 1.05rem;
+    }
+
+    .chatbot__hora {
+        font-size: 0.82rem;
+    }
+
+    .chatbot__btn-comentarios {
+        font-size: 0.9rem;
+    }
+}
