@@ -593,3 +593,59 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* ===========================
+   BREACKPOINT - 1400px
+=========================== */
+@media (min-width: 1400px) {
+    .chatbot__chat {
+        max-width: 940px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .chatbot__bloque {
+        max-height: 800px;
+    }
+
+    .menu-superior__enlace {
+        font-size: 1.05rem;
+    }
+
+    .menu-lateral__enlace {
+        font-size: 1.05rem;
+    }
+
+    .chatbot__bocadillo {
+        font-size: 1.1rem;
+    }
+
+    .chatbot__parrafo-ia {
+        font-size: 1.1rem;
+    }
+
+    .chatbot__cuadro-txt {
+        font-size: 1.1rem;
+        min-height: 55px;
+    }
+
+    .chatbot__hora {
+        font-size: 0.85rem;
+    }
+
+    .chatbot__btn-comentarios {
+        font-size: 0.95rem;
+    }
+
+    .formulario {
+        font-size: 1rem;
+    }
+
+    .formulario__textarea {
+        font-size: 1rem;
+    }
+
+    .formulario__select {
+        font-size: 0.95rem;
+    }
+}
