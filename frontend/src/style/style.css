@@ -471,3 +471,84 @@ body {
     }
 }
 
+/* ===========================
+   BREACKPOINT - 992px 
+=========================== */
+@media (min-width: 992px) {
+    .main {
+        grid-template-columns: 270px 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas:
+            "cabecera cabecera"
+            "lateral chat";
+    }
+
+    /* Ocultamos hamburguesa */
+    .hamburguesa {
+        display: none;
+    }
+
+    /* Ocultamos overlay */
+    .overlay {
+        display: none;
+    }
+
+    /* Menú lateral fijo en grid */
+    .menu-lateral {
+        position: static;
+        left: auto;
+        top: auto;
+        width: auto;
+        height: auto;
+        transition: none;
+    }
+
+    /* Mostramos menú superior */
+    .menu-superior {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .menu-superior__enlace {
+        font-size: 0.95rem;
+    }
+
+    .menu-lateral__enlace {
+        font-size: 0.95rem;
+    }
+
+    .chatbot__chat {
+        max-width: 840px;
+    }
+
+    .chatbot__bocadillo {
+        max-width: 850px;
+        font-size: 1rem;
+    }
+
+    .chatbot__txt-ia {
+        max-width: 750px;
+    }
+
+    .chatbot__parrafo-ia {
+        font-size: 1rem;
+    }
+
+    .chatbot__bloque {
+        max-height: 700px;
+    }
+
+    .chatbot__cuadro-txt {
+        font-size: 1rem;
+    }
+
+    .chatbot__hora {
+        font-size: 0.8rem;
+    }
+
+    .chatbot__btn-comentarios {
+        font-size: 0.88rem;
+    }
+}
+
