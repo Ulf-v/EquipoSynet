@@ -379,3 +379,47 @@ body {
     margin-bottom: 1.2rem;
     font-size: 0.9rem;
 }
+
+
+/* ===========================
+    BREACKPOINT - 576px 
+=========================== */
+@media (min-width: 576px) {
+
+
+    .main {
+        grid-template-rows: 65px 1fr;
+    }
+
+    .chatbot__chat {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .chatbot__bocadillo {
+        max-width: 85%;
+        font-size: 0.92rem;
+    }
+
+    .chatbot__txt-ia {
+        max-width: 85%;
+    }
+
+    .chatbot__parrafo-ia {
+        font-size: 0.92rem;
+    }
+
+    .chatbot__cuadro-txt {
+        width: 88%;
+        font-size: 0.92rem;
+    }
+
+    .menu-superior__enlace {
+        font-size: 0.92rem;
+    }
+
+    .menu-lateral__enlace {
+        font-size: 0.92rem;
+    }
+}
+
