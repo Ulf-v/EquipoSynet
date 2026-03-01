@@ -38,39 +38,6 @@ Synet es una plataforma concebida para optimizar y actualizar los procesos de ge
 
 Synet ha sido desarrollado siguiendo una arquitectura clásica de tres capas, seleccionada por su eficacia y claridad estructural. El sistema incorpora un frontend construido con React, un backend implementado en Spring Boot y un entorno de almacenamiento basado en MongoDB para la gestión de los datos.
 
-```mermaid
-graph TB
-    subgraph Client["🖥️ CAPA DE PRESENTACIÓN"]
-        UI[React + Tailwind CSS<br/>Puerto 3000]
-    end
-    
-    subgraph API["⚙️ CAPA DE APLICACIÓN"]
-        Flask[Flask API<br/>Puerto 5000]
-        WS[WebSocket Server<br/>Socket.IO]
-        
-    Services[Servicios:<br/>Users, Patients<br/>Records]
-    end
-    
-    subgraph Database["💾 CAPA DE DATOS"]
-        PG[(PostgreSQL<br/>Usuarios, Pacientes<br/>Historiales)]
-        
-    MDB[(MongoDB<br/>Almacenamiento<br/>NoSQL)]
-    end
-    
-    UI -->|HTTPS/REST| Flask
-    UI -->|WebSocket| WS
-    
-    Flask --> Services
-    WS --> Services
-    
-    Services --> PG
-    Services --> MDB
-    
-    style Client fill:#61dafb,stroke:#333,stroke-width:3px,color:#000
-    style API fill:#3c873a,stroke:#333,stroke-width:3px,color:#fff
-    style Database fill:#336791,stroke:#333,stroke-width:3px,color:#fff
-```
-
 ---
 
 ## ⚙️ Instalación y ejecución
