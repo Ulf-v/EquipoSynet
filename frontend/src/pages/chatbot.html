@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synet | Chatbot</title>
+    <link rel="shortcut icon" href="./../../public/synet-logo.svg" type="image/x-icon">
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./../style/chatbot.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- CONTENEDOR -->
+    <main class="main">
+        <!-- HEADER -->
+        <header class="cabecera">
+            <img src="./../../public/synet-logo.svg" alt="Logotipo">
+
+            <!-- Menú superior -->
+            <nav class="menu-superior">
+                <ul class="menu-superior__lista">
+                    <li><a href="./../index.html" class="menu-superior__enlace">Inicio</a></li>
+                    <li><a href="./chatbot.html" class="menu-superior__enlace">Chatbot</a></li>
+                    <li><a href="./validacion_Medicos.html" class="menu-superior__enlace">Validación de casos</a></li>
+                    <li><a href="#" class="menu-superior__enlace">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa-->
+            <button class="hamburguesa" id="btnHamburguesa" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="overlay" id="overlay"></div>
+            <!-- Menú Lateral -->
+            <aside class="menu-lateral" id="menuLateral">
+                <ul class="menu-lateral__lista">
+                    <li><a class="menu-lateral__enlace" href="#">Nuevo chat</a></li>
+                    <li><a class="menu-lateral__enlace" href="#">Historial</a></li>
+                    <li><a class="menu-lateral__enlace" href="#">Usuarios</a></li>
+                </ul>
+            </aside>
+
+        <!-- CHATBOT -->
+        <section class="chatbot__chat">
+            <article class="chatbot__bloque" id="chat">
+                <!-- <div class="chatbot__txt-ia">
+                    <p class="chatbot__parrafo-ia">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque at dolorem rerum id laboriosam officiis rem beatae a tempora, vitae blanditiis
+                    iste obcaecati numquam totam nostrum quia. Consequuntur, ex dignissimos!</p>
+
+                    <button class="chatbot__btn-comentarios" id="chatbot__btn-comentarios">Valorar respuesta</button>
+
+                    <form action="#" method="post" class="formulario" id="formulario">
+                        <h3 class="formulario__title">Formulario de valoración de respuesta</h3>
+                        <textarea class="formulario__textarea" name="valoracion" id=""placeholder="Escriba aquí su valoración"></textarea>
+
+                        <article class="formulario__selector">
+                            <label for="valoracion">Valoración de redacción</label>
+                            <select name="" id="" class="formulario__select">
+                                <option value="" disabled selected>Seleccione una nota</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </article>
+
+                        <article class="formulario__selector">
+                            <label for="valoracion">Valoración de rigurosidad médica</label>
+                            <select name="" id="" class="formulario__select">
+                                <option value="" disabled selected>Seleccione una nota</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </article>
+                        
+                        <article class="formulario__selector">
+                            <label for="valoracion">Valoración de razonamiento según el contexto</label>
+                            <select name="" id="" class="formulario__select">
+                                <option value="" disabled selected>Seleccione una nota</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </article>
+
+                        <input class="formulario__submit" type="submit" value="Enviar">
+                    </form>
+                </div> -->
+            </article>
+
+            <article class="chatbot__form">
+                <input class="chatbot__cuadro-txt" type="text" id="inputTxt" placeholder="Escribe tu pregunta">
+                <button id="enviar" class="chatbot__enviar">
+                    <i class="fa-solid fa-paper-plane chatbot__icon"></i>
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <script src="./../js/chatbot.js"></script>
+    <script src="./../js/burger.js"></script>
+</body>
+</html>
