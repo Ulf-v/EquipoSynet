@@ -1,0 +1,19 @@
+# Maven / Gradle
+target/
+build/
+
+# Spring Boot
+*.log
+*.tmp
+*.jar
+*.war
+
+# IDEs
+.idea/
+*.iml
+*.classpath
+*.project
+
+# Credentials
+application.properties
+application.yml
