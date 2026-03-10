@@ -1,19 +1,49 @@
-# Maven / Gradle
-target/
-build/
+# ================================
+# Java / Spring Boot
+# ================================
+/target/
+/bin/
+/out/
 
-# Spring Boot
-*.log
-*.tmp
+# Maven / Gradle
+*.iml
+*.class
 *.jar
 *.war
+*.ear
+/.idea/
+/*.log
+/*.tmp
+/.classpath
+/.project
+/.settings/
 
-# IDEs
-.idea/
-*.iml
-*.classpath
-*.project
+# ================================
+# Spring Boot
+# ================================
+/spring-boot-app/build/
+/spring-boot-app/tmp/
 
-# Credentials
-application.properties
-application.yml
+# ================================
+# Configs y secrets
+# ================================
+# Variables de entorno locales
+.env
+.env.local
+.env.*.local
+
+# OAuth / DB credentials
+application-secret.properties
+application-secrets.yml
+
+# ================================
+# Docker
+# ================================
+/docker-compose.override.yml
+**/docker-compose.override.yml
+
+# ================================
+# OS / Editor
+# ================================
+.DS_Store
+Thumbs.db
