@@ -13,7 +13,7 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers("/", "/index.html").permitAll()
-                .requestMatchers("/pages/select_page.html", "/api/**").authenticated()
+                .requestMatchers("/pages/**", "/api/**").authenticated()
                 .anyRequest().permitAll()
         )
         .oauth2Login(oauth -> oauth
