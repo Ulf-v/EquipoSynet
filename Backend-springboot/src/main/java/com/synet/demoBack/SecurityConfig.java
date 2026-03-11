@@ -12,13 +12,13 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/index.html", "/pages/**").permitAll()
-                .requestMatchers("/validacion", "/api/**").authenticated()
+                .requestMatchers("/", "/index.html").permitAll()
+                .requestMatchers("/pages/select_page.html", "/api/**").authenticated()
                 .anyRequest().permitAll()
         )
         .oauth2Login(oauth -> oauth
                 .loginPage("/login")
-                .defaultSuccessUrl("/validacion", true)
+                .defaultSuccessUrl("/pages/select_page.html", true)
         );
 
         return http.build();
