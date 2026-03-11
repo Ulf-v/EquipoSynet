@@ -1,7 +1,5 @@
 package com.synet.demoBack;
 
-import com.synet.demoBack.Archivo;
-import com.synet.demoBack.ArchivoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,17 +13,22 @@ public class ArchivoService {
     private ArchivoRepository archivoRepository;
 
     // Obtener todos los archivos
-    public List<Archivo> obtenerTodos() {
+    public List<CasoClinico> obtenerTodos() {
         return archivoRepository.findAll();
     }
 
     // Obtener archivo por ID
-    public Optional<Archivo> obtenerPorId(String id) {
+    public Optional<CasoClinico> obtenerPorId(String id) {
         return archivoRepository.findById(id);
     }
 
-    // Obtener por tipo
-    public List<Archivo> obtenerPorTipo(String tipo) {
-        return archivoRepository.findByTipo(tipo);
+    // Obtener por categoría
+    public List<CasoClinico> obtenerPorCategoria(String categoria) {
+        return archivoRepository.findByCategoria(categoria);
+    }
+
+    // Obtener por dificultad
+    public List<CasoClinico> obtenerPorDificultad(String dificultad) {
+        return archivoRepository.findByDificultad(dificultad);
     }
 }
