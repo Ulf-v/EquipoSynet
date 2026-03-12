@@ -44,7 +44,9 @@ body {
     display: flex;
     justify-content: center;
 }
-
+.cuadroColorCasos{
+    width: 1200px;
+}
 .textarea {
     resize: none;
     border: none;
