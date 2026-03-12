@@ -1,5 +1,5 @@
 # ACTA DE CONSTITUCIÓN DEL EQUIPO  
-**Proyecto:** Desarrollo de Plataforma Web con Backend en Spring Boot y Frontend en React  
+**Proyecto:** Desarrollo de Plataforma Web con Backend en Spring Boot y Frontend en html, css y js  
 **Fecha de constitución:** 29/09/2025  
 **Versión:** 1.0  
 **Elaborado por:** Equipo de Desarrollo
@@ -31,7 +31,7 @@ Cada integrante del equipo tiene una tarea asignada, aunque todos participan en 
 Desarrollar una plataforma web compuesta por:
 
 - **Backend** basado en **Java + Spring Boot**, conectado a una base de datos **MongoDB** alojada en un servidor dedicado.  
-- **Frontend** desarrollado en **React**, con diseño apoyado en **Bootstrap**.  
+- **Frontend** desarrollado en **html, css y js**.  
 - Integración de **Google Auth** para el sistema de autenticación.  
 - Contenedorización y despliegue mediante **Docker**.
 
@@ -70,7 +70,7 @@ El proyecto contempla:
 
 | Área | Tecnología |
 |------|------------|
-| Frontend | React, Bootstrap |
+| Frontend | html, css, js |
 | Backend | Java, Spring Boot |
 | Base de datos | MongoDB Server |
 | Infraestructura | Docker |
