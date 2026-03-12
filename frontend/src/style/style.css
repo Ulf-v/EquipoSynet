@@ -21,8 +21,8 @@ body {
     height: 100%;
     opacity: 20%;
     animation-name: background;
-    animation-direction: normal;
-    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-duration: 30s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate;
