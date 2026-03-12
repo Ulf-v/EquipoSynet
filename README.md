@@ -10,8 +10,6 @@
 
 ## 🛠️ Tecnologías utilizadas
 
-![React](https://img.shields.io/badge/React-18.2%2B-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![BootStrap](https://img.shields.io/badge/BootStrap-3.9%2B-3776AB?style=for-the-badge&logo=Bootstrap&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-3.9%2B-3776AB?style=for-the-badge&logo=Java&logoColor=white)
 ![SpringBoot](https://img.shields.io/badge/Flask-2.0%2B-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.0%2B-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -36,7 +34,7 @@ Synet es una plataforma concebida para optimizar y actualizar los procesos de ge
 
 ## 🏗️ Arquitectura del Sistema
 
-Synet ha sido desarrollado siguiendo una arquitectura clásica de tres capas, seleccionada por su eficacia y claridad estructural. El sistema incorpora un frontend construido con React, un backend implementado en Spring Boot y un entorno de almacenamiento basado en MongoDB para la gestión de los datos.
+Synet ha sido desarrollado siguiendo una arquitectura clásica de tres capas, seleccionada por su eficacia y claridad estructural. El sistema incorpora un frontend construido con html, css y js, un backend implementado en Spring Boot y un entorno de almacenamiento basado en MongoDB para la gestión de los datos.
 
 ---
 
