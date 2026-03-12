@@ -45,9 +45,11 @@ body {
     justify-content: right;
     padding-right: 40px;
 }
-.cuadroColorCasos{
+
+.cuadroColorCasos {
     width: 1100px;
 }
+
 .textarea {
     resize: none;
     border: none;
@@ -88,6 +90,22 @@ body {
     background-color: rgba(0, 0, 255, 0.582);
 }
 
+.recargarBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 190px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 223, 130, 0.726);
+    border: none;
+    color: white;
+    z-index: 20;
+}
+
+.recargarBtn:hover {
+ background-color: rgba(0, 192, 112, 0.849);   
+}
+
 .radiusSectionContainer {
     display: flex;
     flex-direction: column;
@@ -115,6 +133,7 @@ body {
     width: 100%;
     margin-top: 10px;
 }
+
 .submit:hover {
     background-color: rgba(0, 0, 255, 0.582);
 }

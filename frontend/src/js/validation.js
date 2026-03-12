@@ -21,6 +21,7 @@ const referencias = document.getElementById("referencias");
 const formMedico = document.getElementById("formMedico");
 const valorarBtn = document.getElementById("valorarBtn");
 const formularioMedico = document.getElementById("formularioMedico");
+const recargarBtn = document.getElementById("recargarBtn");
 
 const cargarCasos = async () => {
     formMedico.classList.add("hidden");
@@ -63,6 +64,11 @@ const sendForm = (event) => {
     event.preventDefault();
     window.location.href = "./validacion_Medicos.html";
 }
+
+const reload = () => {
+    window.location.href = "./validacion_Medicos.html";
+}
 document.addEventListener("DOMContentLoaded", cargarCasos);
 valorarBtn.addEventListener("click", mostrarForm);
-formularioMedico.addEventListener("submit", sendForm)
+formularioMedico.addEventListener("submit", sendForm);
+recargarBtn.addEventListener("click", reload);
