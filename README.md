@@ -10,6 +10,9 @@
 
 ## 🛠️ Tecnologías utilizadas
 
+![HTML](https://img.shields.io/badge/HTML.9%2B-3776AB?style=for-the-badge&logo=Java&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS.9%2B-3776AB?style=for-the-badge&logo=Java&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JS.9%2B-3776AB?style=for-the-badge&logo=Java&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-3.9%2B-3776AB?style=for-the-badge&logo=Java&logoColor=white)
 ![SpringBoot](https://img.shields.io/badge/Flask-2.0%2B-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.0%2B-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
