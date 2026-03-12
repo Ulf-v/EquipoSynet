@@ -18,8 +18,12 @@ const tratamientoNoFarma = document.getElementById("tratamientoNoFarma");
 const factores = document.getElementById("factores");
 const alergias = document.getElementById("alergias");
 const referencias = document.getElementById("referencias");
+const formMedico = document.getElementById("formMedico");
+const valorarBtn = document.getElementById("valorarBtn");
+const formularioMedico = document.getElementById("formularioMedico");
 
 const cargarCasos = async () => {
+    formMedico.classList.add("hidden");
     const res = await fetch("https://synet.riberadeltajo.es/api/archivos");
     const resJson = await res.json();
 
@@ -52,4 +56,13 @@ const mostrarCaso = (casosJson) => {
     referencias.textContent = caso.referencias_bibliograficas;
 }
 
+const mostrarForm = () => {
+    formMedico.classList.toggle("hidden");
+}
+const sendForm = (event) => {
+    event.preventDefault();
+    window.location.href = "./validacion_Medicos.html";
+}
 document.addEventListener("DOMContentLoaded", cargarCasos);
+valorarBtn.addEventListener("click", mostrarForm);
+formularioMedico.addEventListener("submit", sendForm)

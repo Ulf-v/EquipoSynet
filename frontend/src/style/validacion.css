@@ -1,0 +1,113 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(222, 255, 255);
+}
+
+.cabecera {
+    position: sticky;
+    top: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cuadroCasos {
+    width: 1200px;
+    padding-top: 50px;
+    display: flex;
+    padding-bottom: 430px;
+}
+
+.dataTitle {
+    font-weight: bold;
+    background-color: rgba(0, 0, 255, 0.288);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+.formMedico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cuadroForm {
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.textarea {
+    resize: none;
+    border: none;
+    font-family: sans-serif;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cuadroForm {
+    width: 100%;
+}
+
+.cuadroForm__color {
+    width: 1200px;
+}
+
+.valorarBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.288);
+    border: none;
+    color: white;
+    z-index: 20;
+
+}
+
+.valorarBtn:hover {
+    background-color: rgba(0, 0, 255, 0.582);
+}
+
+.radiusSectionContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.radiusSection {
+    background-color: rgb(194, 214, 233);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.labelRadius {
+    font-weight: bold;
+}
+
+.submit {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.288);
+    border: none;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+.submit:hover {
+    background-color: rgba(0, 0, 255, 0.582);
+}

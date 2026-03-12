@@ -7,134 +7,141 @@
     <title>Synet | Validación de casos</title>
     <link rel="shortcut icon" href="./../../public/synet-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./../style/chatbot.css">
+    <link rel="stylesheet" href="./../style/validacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
-    <main class="main">
-        <header class="cabecera">
-            <img src="./../../public/synet-logo.svg" alt="Logotipo">
-            <nav class="menu-superior">
-                <ul class="menu-superior__lista">
-                    <li><a href="./select_page.html" class="menu-superior__enlace">Inicio</a></li>
-                    <li><a href="./chatbot.html" class="menu-superior__enlace">Chatbot</a></li>
-                    <li><a href="./validacion_Medicos.html" class="menu-superior__enlace">Validación de casos</a></li>
-                    <li><a href="#" class="menu-superior__enlace">Ayuda</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <aside class="menu-lateral">
-            <ul class="menu-lateral__lista">
-                <li><a class="menu-lateral__enlace" href="#">Nuevo chat</a></li>
-                <li><a class="menu-lateral__enlace" href="#">Historial</a></li>
-                <li><a class="menu-lateral__enlace" href="#">Usuarios</a></li>
+    <header class="cabecera">
+        <img src="./../../public/synet-logo.svg" alt="Logotipo">
+        <nav class="menu-superior">
+            <ul class="menu-superior__lista">
+                <li><a href="./select_page.html" class="menu-superior__enlace">Inicio</a></li>
+                <li><a href="./chatbot.html" class="menu-superior__enlace">Chatbot</a></li>
+                <li><a href="./validacion_Medicos.html" class="menu-superior__enlace">Validación de casos</a></li>
+                <li><a href="#" class="menu-superior__enlace">Ayuda</a></li>
             </ul>
-        </aside>
-        <section class="chatbot__chat">
+        </nav>
+    </header>
+    <main class="container">
+        <section class="cuadroCasos">
             <section class="cuadro">
 
-                <p>Edad:</p>
+                <p class="dataTitle">Edad:</p>
                 <p id="edad"></p>
-                <p>Sexo:</p>
+                <p class="dataTitle">Sexo:</p>
                 <p id="sexo"></p>
-                <p>"antecedentes_medicos": </p>
+                <p class="dataTitle">Antecedentes Médicos:</p>
                 <p id="antecedentes"></p>
-                <p>"antecedentes_quirurgicos":</p>
+                <p class="dataTitle">Antecedentes Quirúrgicos:</p>
                 <p id="antecedentesQuir"></p>
-                <p>Hábitos:</p>
+                <p class="dataTitle">Hábitos:</p>
                 <p id="habitos"></p>
-                <p>Situacion basal:</p>
+                <p class="dataTitle">Situacion basal:</p>
                 <p id="situiacionBas"></p>
-                <p>Medicacion_actual:</p>
+                <p class="dataTitle">Medicacion_actual:</p>
                 <p id="medicacion"></p>
-                <p>Antecedentes_familiares:</p>
+                <p class="dataTitle">Antecedentes_familiares:</p>
                 <p id="antecedentesFam"></p>
-                <p>Motivo:</p>
+                <p class="dataTitle">Motivo:</p>
                 <p id="motivo"></p>
-                <p>Sintomas:</p>
+                <p class="dataTitle">Sintomas:</p>
                 <p id="sintomas"></p>
-                <p>Exploracion_general:</p>
+                <p class="dataTitle">Exploracion_general:</p>
                 <p id="exploracion"></p>
-                <p>Signos:</p>
+                <p class="dataTitle">Signos:</p>
                 <p id="signos"></p>
-                <p>Resultados_pruebas:</p>
+                <p class="dataTitle">Resultados_pruebas:</p>
                 <p id="resultados"></p>
-                <p>Razonamiento clinico:</p>
+                <p class="dataTitle">Razonamiento clinico:</p>
                 <p id="razonamiento"></p>
-                <p>Diagnóstico final: </p>
+                <p class="dataTitle">Diagnóstico final:</p>
                 <p id="diagnósticoFinal"></p>
-                <p>Tratamiento_farmacologico:</p>
+                <p class="dataTitle">Tratamiento_farmacologico:</p>
                 <p id="tratamientoFarma"></p>
-                <p>Tratamiento_no_farmacologico:</p>
+                <p class="dataTitle">Tratamiento_no_farmacologico:</p>
                 <p id="tratamientoNoFarma"></p>
-                <p>Factores sociales:</p>
+                <p class="dataTitle">Factores sociales:</p>
                 <p id="factores"></p>
-                <p>Alergias:</p>
-                <p id="alergias"> "No conocidas.",</p>
-                <p>Referencias_bibliograficas:</p>
+                <p class="dataTitle">Alergias:</p>
+                <p id="alergias"></p>
+                <p class="dataTitle">Referencias_bibliograficas:</p>
                 <p id="referencias"></p>
             </section>
 
-            <section class="cuadro" id="chat">
 
-                <form action="./validacion_Medicos.html" method="post">
-                    <h2 class="chatbot__title--medicos">Valoraciones Médicos</h2>
-                    <h3>Vote del 1 al 5</h3>
+        </section>
+        <button id="valorarBtn" class="valorarBtn"><i class="fa-solid fa-marker"></i> Valorar caso</button>
+
+        <div id="formMedico" class="cuadroForm">
+            <section class="cuadro cuadroForm__color">
+                <form id="formularioMedico" class="formMedico" action="./validacion_Medicos.html" method="post">
+                    <h3 class="chatbot__title--medicos">Valoración Médica</h3>
                     <article class="form">
-                        <label for="precision">Precisión diagnostica:</label>
-                        <article>
-                            <input type="radio" name="option" id="1"><label for="1">1</label>
-                            <input type="radio" name="option" id="2"><label for="2">2</label>
-                            <input type="radio" name="option" id="3"><label for="3">3</label>
-                            <input type="radio" name="option" id="4"><label for="4">4</label>
-                            <input type="radio" name="option" id="5"><label for="5">5</label>
-                        </article>
+                        <section class="radiusSectionContainer">
+                            <div class="radiusSection">
 
-                        <label for="claridad">Claridad textual:</label>
-                        <article>
-                            <input type="radio" name="option1" id="1"><label for="1">1</label>
-                            <input type="radio" name="option1" id="2"><label for="2">2</label>
-                            <input type="radio" name="option1" id="3"><label for="3">3</label>
-                            <input type="radio" name="option1" id="4"><label for="4">4</label>
-                            <input type="radio" name="option1" id="5"><label for="5">5</label>
-                        </article>
+                                <label class="labelRadius" for="precision">Precisión diagnostica:</label>
+                                <article>
+                                    <input type="radio" name="option" id="1"><label for="1">1</label>
+                                    <input type="radio" name="option" id="2"><label for="2">2</label>
+                                    <input type="radio" name="option" id="3"><label for="3">3</label>
+                                    <input type="radio" name="option" id="4"><label for="4">4</label>
+                                    <input type="radio" name="option" id="5"><label for="5">5</label>
+                                </article>
+                            </div>
+                            <div class="radiusSection">
 
-                        <label for="relevancia">Relevancia clínica:</label>
-                        <article>
-                            <input type="radio" name="option2" id="1"><label for="1">1</label>
-                            <input type="radio" name="option2" id="2"><label for="2">2</label>
-                            <input type="radio" name="option2" id="3"><label for="3">3</label>
-                            <input type="radio" name="option2" id="4"><label for="4">4</label>
-                            <input type="radio" name="option2" id="5"><label for="5">5</label>
-                        </article>
+                                <label class="labelRadius" for="claridad">Claridad textual:</label>
+                                <article>
+                                    <input type="radio" name="option1" id="1"><label for="1">1</label>
+                                    <input type="radio" name="option1" id="2"><label for="2">2</label>
+                                    <input type="radio" name="option1" id="3"><label for="3">3</label>
+                                    <input type="radio" name="option1" id="4"><label for="4">4</label>
+                                    <input type="radio" name="option1" id="5"><label for="5">5</label>
+                                </article>
+                            </div>
+                            <div class="radiusSection">
 
-                        <label for="adecuacion">Adecuación contextual:</label>
-                        <article>
-                            <input type="radio" name="option3" id="1"><label for="1">1</label>
-                            <input type="radio" name="option3" id="2"><label for="2">2</label>
-                            <input type="radio" name="option3" id="3"><label for="3">3</label>
-                            <input type="radio" name="option3" id="4"><label for="4">4</label>
-                            <input type="radio" name="option3" id="5"><label for="5">5</label>
-                        </article>
+                                <label class="labelRadius" for="relevancia">Relevancia clínica:</label>
+                                <article>
+                                    <input type="radio" name="option2" id="1"><label for="1">1</label>
+                                    <input type="radio" name="option2" id="2"><label for="2">2</label>
+                                    <input type="radio" name="option2" id="3"><label for="3">3</label>
+                                    <input type="radio" name="option2" id="4"><label for="4">4</label>
+                                    <input type="radio" name="option2" id="5"><label for="5">5</label>
+                                </article>
+                            </div>
+                            <div class="radiusSection">
 
-                        <label for="nivel_tecnico">Nivel técnico adecuado:</label>
-                        <article>
-                            <input type="radio" name="option4" id="1"><label for="1">1</label>
-                            <input type="radio" name="option4" id="2"><label for="2">2</label>
-                            <input type="radio" name="option4" id="3"><label for="3">3</label>
-                            <input type="radio" name="option4" id="4"><label for="4">4</label>
-                            <input type="radio" name="option4" id="5"><label for="5">5</label>
-                        </article>
+                                <label class="labelRadius" for="adecuacion">Adecuación contextual:</label>
+                                <article>
+                                    <input type="radio" name="option3" id="1"><label for="1">1</label>
+                                    <input type="radio" name="option3" id="2"><label for="2">2</label>
+                                    <input type="radio" name="option3" id="3"><label for="3">3</label>
+                                    <input type="radio" name="option3" id="4"><label for="4">4</label>
+                                    <input type="radio" name="option3" id="5"><label for="5">5</label>
+                                </article>
+                            </div>
+                            <div class="radiusSection">
 
+                                <label class="labelRadius" for="nivel_tecnico">Nivel técnico adecuado:</label>
+                                <article>
+                                    <input type="radio" name="option4" id="1"><label for="1">1</label>
+                                    <input type="radio" name="option4" id="2"><label for="2">2</label>
+                                    <input type="radio" name="option4" id="3"><label for="3">3</label>
+                                    <input type="radio" name="option4" id="4"><label for="4">4</label>
+                                    <input type="radio" name="option4" id="5"><label for="5">5</label>
+                                </article>
+                            </div>
+                        </section>
                         <label for="observaciones">Observaciones:</label>
-                        <textarea name="observaciones" id="observaciones" rows="4"></textarea>
+                        <textarea class="textarea" name="observaciones" id="observaciones" rows="8"></textarea>
                     </article>
-                    <input type="submit" value="Enviar">
+                    <input class="submit" type="submit" value="Enviar">
                 </form>
-
-            </section>
+        </div>
 
         </section>
     </main>
