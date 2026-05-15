@@ -2,9 +2,39 @@ const inputTxt = document.getElementById("inputTxt");
 const enviar = document.getElementById("enviar");
 const chat = document.getElementById("chat");
 const btnComentarios = document.getElementById("chatbot__btn-comentarios");
+const messageForm = document.getElementById("messageForm");
 
 
 escribir = true;
+
+const sendMessage = async (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData(messageForm);
+    const formJson = Object.fromEntries(formData.entries());
+    // console.log(formJson.userMessage);
+    mostrarMensaje();
+
+    const res = await fetch("http://cloud.riberadeltajo.es:11200/generate/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "text/plain"
+        },
+        body: JSON.stringify({
+            "new_message": {
+                "role": "user",
+                "content": formJson.userMessage
+            }
+        })
+    });
+
+    const resJson = await res.json();
+
+    
+    // console.log(resJson[0].generated_text);
+    setTimeout(() => mostrarTextoIa(resJson[0].generated_text), 500);
+}
+
 
 const mostrarMensaje = () => {
     if (inputTxt.value != "" && escribir == true) {
@@ -37,12 +67,10 @@ const mostrarMensaje = () => {
         bocadillo.appendChild(hora);
 
         inputTxt.value = "";
-
-        setTimeout(mostrarTextoIa, 1000);
     }
 }
 
-const mostrarTextoIa = () => {
+const mostrarTextoIa = (response) => {
 
     const bloqueTxt = document.createElement("article");
     bloqueTxt.className = "chatbot__txt-ia";
@@ -56,14 +84,13 @@ const mostrarTextoIa = () => {
 
     $i = 0;
     textoRellenar = "";
-    textoPrueba = "Esto es un mensaje de prueba para mostrar cómo se mostrarán los mensajes del chatbot que recibirá desde el backend Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum error voluptatibus, similique enim tempore quaerat accusantium omnis praesentium in? Corporis autem alias veniam? Dignissimos magni laboriosam labore beatae, ab pariatur.";
 
-    // intervalo para que aparezcan las letras poco a poco
+    
     const rellenador = setInterval(() => {
-        parrafoTxt.textContent = textoRellenar += textoPrueba[$i];
+        parrafoTxt.textContent = textoRellenar += response[$i];
         $i++;
 
-        if ($i >= textoPrueba.length) {
+        if ($i >= response.length) {
             clearInterval(rellenador);
             escribir = true;
         }
@@ -163,5 +190,6 @@ const crearSelector = () => {
     return select;
 }
 
-enviar.addEventListener('click', mostrarMensaje);
+messageForm.addEventListener("submit", sendMessage);
+// enviar.addEventListener('click', mostrarMensaje);
 chat.addEventListener('click', mostrarForm);
