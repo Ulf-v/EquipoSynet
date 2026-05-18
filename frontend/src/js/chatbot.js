@@ -15,7 +15,7 @@ const sendMessage = async (event) => {
     // console.log(formJson.userMessage);
     mostrarMensaje();
 
-    const res = await fetch("https://synet.riberadeltajo.es/api/generate", {
+    const res = await fetch("http://cloud.riberadeltajo.es:11200/generate/", {
         method: "POST",
         headers: {
             "Content-Type": "text/plain"
@@ -31,7 +31,7 @@ const sendMessage = async (event) => {
     const resJson = await res.json();
 
     
-    console.log(resJson[0].generated_text);
+    // console.log(resJson[0].generated_text);
     setTimeout(() => mostrarTextoIa(resJson[0].generated_text), 500);
 }
 
