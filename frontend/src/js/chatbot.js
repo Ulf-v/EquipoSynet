@@ -15,7 +15,7 @@ const sendMessage = async (event) => {
     // console.log(formJson.userMessage);
     mostrarMensaje();
 
-    const res = await fetch("http://cloud.riberadeltajo.es:11200/generate/", {
+    const res = await fetch("https://synet.riberadeltajo.es/api/generate", {
         method: "POST",
         headers: {
             "Content-Type": "text/plain"
