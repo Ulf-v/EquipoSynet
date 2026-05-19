@@ -9,6 +9,7 @@ public class ValoracionCaso {
     @Id
     private String id;
     private String casoId;
+    private String emailMedico;
     private int precision;
     private int claridad;
     private int relevancia;
@@ -31,6 +32,14 @@ public class ValoracionCaso {
 
     public void setCasoId(String casoId) {
         this.casoId = casoId;
+    }
+
+    public String getEmailMedico() {
+        return emailMedico;
+    }
+
+    public void setEmailMedico(String emailMedico) {
+        this.emailMedico = emailMedico;
     }
 
     public int getPrecision() {

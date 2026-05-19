@@ -2,6 +2,8 @@ package com.synet.demoBack;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,7 +17,13 @@ public class ValoracionCasoController {
 
     // POST nueva valoración → /api/valoraciones
     @PostMapping
-    public ResponseEntity<ValoracionCaso> guardarValoracion(@RequestBody ValoracionCaso valoracion) {
+    public ResponseEntity<ValoracionCaso> guardarValoracion(@RequestBody ValoracionCaso valoracion,
+            @AuthenticationPrincipal OAuth2User principal) {
+        // Asignar email del médico autenticado
+        if (principal != null) {
+            String email = principal.getAttribute("email");
+            valoracion.setEmailMedico(email);
+        }
         ValoracionCaso guardada = valoracionCasoService.guardar(valoracion);
         return ResponseEntity.ok(guardada);
     }
