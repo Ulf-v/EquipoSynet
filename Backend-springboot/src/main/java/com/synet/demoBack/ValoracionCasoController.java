@@ -15,11 +15,9 @@ public class ValoracionCasoController {
     @Autowired
     private ValoracionCasoService valoracionCasoService;
 
-    // POST nueva valoración → /api/valoraciones
     @PostMapping
     public ResponseEntity<ValoracionCaso> guardarValoracion(@RequestBody ValoracionCaso valoracion,
             @AuthenticationPrincipal OAuth2User principal) {
-        // Asignar email del médico autenticado
         if (principal != null) {
             String email = principal.getAttribute("email");
             valoracion.setEmailMedico(email);
@@ -28,14 +26,12 @@ public class ValoracionCasoController {
         return ResponseEntity.ok(guardada);
     }
 
-    // GET todas las valoraciones → /api/valoraciones
     @GetMapping
     public ResponseEntity<List<ValoracionCaso>> obtenerTodas() {
         List<ValoracionCaso> valoraciones = valoracionCasoService.obtenerTodas();
         return ResponseEntity.ok(valoraciones);
     }
 
-    // GET valoraciones por caso → /api/valoraciones/caso/{casoId}
     @GetMapping("/caso/{casoId}")
     public ResponseEntity<List<ValoracionCaso>> obtenerPorCaso(@PathVariable String casoId) {
         List<ValoracionCaso> valoraciones = valoracionCasoService.obtenerPorCasoId(casoId);
