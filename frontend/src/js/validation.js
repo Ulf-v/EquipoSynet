@@ -62,6 +62,22 @@ const mostrarForm = () => {
 }
 const sendForm = (event) => {
     event.preventDefault();
+    const formData = new FormData(formularioMedico);
+    const formJson = Object.fromEntries(formData.entries());
+
+    const res = await fetch("/api/valoraciones/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "new_message": {
+                "role": "user",
+                "content": formJson
+            }
+        })
+    });
+
     window.location.href = "./validacion_Medicos.html";
 }
 
